@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QUnit Test Suite</title>
+	<link rel="stylesheet" href="qunit/qunit.css" type="text/css" media="screen">
+	<script type="text/javascript" src="qunit/qunit.js"></script>
+	<script type="text/javascript" src="qunit/jquery-1.4.1.js"></script>
+	<script type="text/javascript">
+		var LoadModule = LoadModule || function() {};
+		var Exec = Exec || function() {};
+		var InputParser = InputParser || { read: function() {}};
+		var Debug = function() { };
+
+		Debug.Log = function(message) {
+			
+			if (window.console && window.console.log) {
+				window.console.log(message);
+			}
+		};
+	</script>
+	<script type="text/javascript" src="output/obj.js"></script>
+	<script type="text/javascript" src="output/texas.js"></script>
+	<script type="text/javascript" src="output/card.js"></script>
+	<script type="text/javascript" src="output/input_parser.js"></script>
+	<script type="text/javascript" src="output/player.js"></script>
+	<script type="text/javascript" src="output/player_collection.js"></script>
+	<script type="text/javascript" src="lib/underscore-min.js"></script>
+	
+</head>
+<body>
+	<h1 id="qunit-header">QUnit Test Suite</h1>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+	<div id="qunit-fixture">test markup</div>
+	
+	<script type="text/javascript" src="tests/parsing_tests.js"></script>
+	<script type="text/javascript" src="tests/card_tests.js"></script>
+	<script type="text/javascript" src="tests/hand_tests.js"></script>
+	<script type="text/javascript" src="tests/frequency_tests.js"></script>
+	<script type="text/javascript" src="tests/hand_recognition_tests.js"></script>
+	<script type="text/javascript" src="tests/best_hand_calculation_tests.js"></script>
+	
+	
+</body>
+</html>
